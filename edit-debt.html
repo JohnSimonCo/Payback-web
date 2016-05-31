@@ -1,0 +1,14 @@
+<form name="debtForm">
+  <div class="name-amount">
+    <span ng-bind="$ctrl.debt.owner.name" class="name"></span>
+    <select ng-model="$ctrl.ownerId" ng-options="person.id as person.name for person in $ctrl.people"></select>
+    <input ng-model="$ctrl.amount" type="number" class="amount" placeholder="Amount" required>
+  </div>
+  <div>
+    <input ng-model="$ctrl.note" type="text" class="note" placeholder="Note"></input>
+  </div>
+  <div>
+    <button ng-click="$ctrl.save()" ng-disabled="debtForm.$invalid || debtForm.$pristine">Save</button>
+    <button ng-link="['DebtList']">Cancel</button>
+  </div>
+</form>

@@ -1,0 +1,12 @@
+a.debt {
+  display: block;
+  text-decoration: none;
+  color: initial;
+}
+.debt {
+  background: gray;
+  padding: 5px;
+}
+.debt + .debt {
+  margin-top: 5px;
+}

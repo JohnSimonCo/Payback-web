@@ -1,0 +1,9 @@
+<a ng-repeat="debt in $ctrl.debts" ng-link="['EditDebt', {id: debt.id}]" class="debt">
+  <div class="name-amount">
+    <span ng-bind="debt.owner.name" class="name"></span>
+    <span ng-bind="debt.amount" class="amount"></span>
+  </div>
+  <div>
+    <span ng-bind="debt.note || 'Cash'" class="note"></span>
+  </div>
+</a>
