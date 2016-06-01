@@ -1,7 +1,7 @@
-<a ng-repeat="debt in $ctrl.debts" ng-link="['EditDebt', {id: debt.id}]" class="debt">
+<a ng-repeat="debt in $ctrl.debts" ng-link="['EditDebt', {id: debt.id}]" class="debt" ng-class="{'they-owe': debt.amount > 0, 'i-owe': debt.amount < 0}">
   <div class="name-amount">
     <span ng-bind="debt.owner.name" class="name"></span>
-    <span ng-bind="debt.amount" class="amount"></span>
+    <span ng-bind="debt | currency" class="amount"></span>
   </div>
   <div>
     <span ng-bind="debt.note || 'Cash'" class="note"></span>

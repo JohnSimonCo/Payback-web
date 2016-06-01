@@ -20,11 +20,17 @@ function PeopleListComponent(peopleService) {
 	});
 }
 
-function PeopleService($q) {
-	var peoplePromise = $q.when([
-		{ id: 1, name: 'John Rapp' },
-		{ id: 2, name: 'Simme Pinne' },
-	]);
+function PeopleService($q, appData) {
+	// var peoplePromise = $q.when([
+	// 	{ id: 1, name: 'John Rapp' },
+	// 	{ id: 2, name: 'Simme Pinne' },
+	// ]);
+
+  var peoplePromise = appData.then(function(data) {
+    return data.people.filter(function(person) {
+			return data.deleted.indexOf(person.id) === -1;
+		});
+	});
 
 	this.getPeople = function() {
 		return peoplePromise;

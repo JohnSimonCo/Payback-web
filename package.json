@@ -1,12 +1,26 @@
 {
-  "name": "pay-back-angular",
+  "name": "payback-web",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -a localhost -p 8080 -c-1 ./"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnSimonCo/Payback-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JohnSimonCo/Payback-web/issues"
+  },
+  "homepage": "https://github.com/JohnSimonCo/Payback-web#readme",
+  "description": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.13.4",
+    "google-auth-library": "^0.9.8",
+    "googleapis": "^7.1.0"
+  }
 }

@@ -1,8 +1,17 @@
 <form name="debtForm">
-  <div class="name-amount">
-    <span ng-bind="$ctrl.debt.owner.name" class="name"></span>
+  <div>
     <select ng-model="$ctrl.ownerId" ng-options="person.id as person.name for person in $ctrl.people"></select>
+  </div>
+  <div>
     <input ng-model="$ctrl.amount" type="number" class="amount" placeholder="Amount" required>
+  </div>
+  <div>
+    <label>
+      They owe <input type="radio" ng-model="$ctrl.iOwe" ng-value="false">
+    </label>
+    <label>
+      I owe <input type="radio" ng-model="$ctrl.iOwe" ng-value="true">
+    </label>
   </div>
   <div>
     <input ng-model="$ctrl.note" type="text" class="note" placeholder="Note"></input>

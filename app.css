@@ -10,3 +10,11 @@ a.debt {
 .debt + .debt {
   margin-top: 5px;
 }
+
+.debt.i-owe {
+  background: red;
+}
+
+.debt.they-owe {
+  background: green;
+}
